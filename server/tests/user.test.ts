@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../src/config/express';
+import app from '../src/app';
 
 describe('GET /users', function(){
     it('should return users sorted by name', async () => {

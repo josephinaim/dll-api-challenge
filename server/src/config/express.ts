@@ -2,7 +2,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import morgan from 'morgan';
-import routes from '../routes/index.route'
 
 const app = express();
 
@@ -14,8 +13,5 @@ app.set('host',  process.env.APP_HOST || 'localhost');
 app.use(cors());
 app.use(morgan('tiny'));
 app.use(bodyParser.json());
-
-
-app.use('/api', routes);
 
 export default app;
